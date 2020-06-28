@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a7b5695-a52f-45ba-957a-347e4783edb6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../lesson1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson1/src/main/java/ru/geekbrains/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson1/src/main/java/ru/geekbrains/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson1/src/main/java/ru/geekbrains/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson1/src/main/java/ru/geekbrains/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson1/src/main/java/ru/geekbrains/RunningTrack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson1/src/main/java/ru/geekbrains/Wall.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1dz1kDhlp9mYeGZMeqjW6isbwMM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a7b5695-a52f-45ba-957a-347e4783edb6" name="Default Changelist" comment="" />
+      <created>1593413248886</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593413248886</updated>
+    </task>
+    <servers />
+  </component>
+</project>
