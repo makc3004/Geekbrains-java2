@@ -1,0 +1,579 @@
+Index: lesson1/src/main/java/ru/geekbrains/homework/barrier/Barrier.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/homework/barrier/Barrier.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/homework/barrier/Barrier.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
+@@ -1,6 +0,0 @@
+-package ru.geekbrains.homework.barrier;
+-
+-public interface Barrier {
+-
+-    int getSize();
+-}
+Index: lesson1/src/main/java/ru/geekbrains/homework/participant/Movable.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/homework/participant/Movable.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/homework/participant/Movable.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
+@@ -1,18 +0,0 @@
+-package ru.geekbrains.homework.participant;
+-
+-import ru.geekbrains.homework.barrier.Barrier;
+-import ru.geekbrains.homework.barrier.Track;
+-import ru.geekbrains.homework.barrier.Wall;
+-
+-public interface Movable {
+-
+-    boolean walk(Track track);
+-
+-    boolean jump(Wall wall);
+-
+-    boolean overcome(Barrier barrier);
+-
+-    boolean isDroppedOut();
+-
+-    void setDroppedOut(boolean value);
+-}
+Index: lesson1/src/main/java/ru/geekbrains/Test.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/Test.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/Test.java	(date 1594584072403)
+@@ -1,4 +1,4 @@
+-package ru.geekbrains;
++package ru.geekbrains.geekbrains;
+ 
+ public class Test {
+     //описываем массив в котором проверяем на прохождение стены и дорожки всеми участниками c выводом в консоль
+Index: lesson1/src/main/java/ru/geekbrains/Cat.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/Cat.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/Cat.java	(date 1594584072416)
+@@ -1,4 +1,4 @@
+-package ru.geekbrains;
++package ru.geekbrains.geekbrains;
+ 
+ public class Cat implements Action{
+     public int maxrun;
+Index: lesson1/src/main/java/ru/geekbrains/Human.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/Human.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/Human.java	(date 1594584072413)
+@@ -1,4 +1,4 @@
+-package ru.geekbrains;
++package ru.geekbrains.geekbrains;
+ 
+ public class Human implements Action{
+ 
+Index: lesson1/src/main/java/ru/geekbrains/RunningTrack.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/RunningTrack.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/RunningTrack.java	(date 1594584072407)
+@@ -1,4 +1,4 @@
+-package ru.geekbrains;
++package ru.geekbrains.geekbrains;
+ 
+ public class RunningTrack implements Action{
+     // описываю мдлину дорожки
+Index: lesson1/src/main/java/ru/geekbrains/Wall.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/Wall.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/Wall.java	(date 1594584072400)
+@@ -1,4 +1,4 @@
+-package ru.geekbrains;
++package ru.geekbrains.geekbrains;
+ 
+ public class Wall implements Action {
+     // определяем высоту стены
+Index: lesson1/src/main/java/ru/geekbrains/Robot.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/Robot.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/Robot.java	(date 1594584072410)
+@@ -1,4 +1,4 @@
+-package ru.geekbrains;
++package ru.geekbrains.geekbrains;
+ 
+ public class Robot implements Action {
+     public int maxrun;
+Index: lesson1/src/main/java/ru/geekbrains/geekbrains/homework/barrier/Barrier.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/geekbrains/homework/barrier/Barrier.java	(date 1594584072246)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/homework/barrier/Barrier.java	(date 1594584072246)
+@@ -0,0 +1,6 @@
++package ru.geekbrains.geekbrains.homework.barrier;
++
++public interface Barrier {
++
++    int getSize();
++}
+Index: lesson1/src/main/java/ru/geekbrains/homework/barrier/Track.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/homework/barrier/Track.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/homework/barrier/Track.java	(date 1594584072392)
+@@ -1,4 +1,4 @@
+-package ru.geekbrains.homework.barrier;
++package ru.geekbrains.geekbrains.homework.barrier;
+ 
+ public class Track implements Barrier {
+ 
+Index: lesson1/src/main/java/ru/geekbrains/homework/barrier/Wall.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/homework/barrier/Wall.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/homework/barrier/Wall.java	(date 1594584072389)
+@@ -1,4 +1,4 @@
+-package ru.geekbrains.homework.barrier;
++package ru.geekbrains.geekbrains.homework.barrier;
+ 
+ public class Wall implements Barrier {
+ 
+Index: lesson1/src/main/java/ru/geekbrains/homework/participant/Cat.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/homework/participant/Cat.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/homework/participant/Cat.java	(date 1594584072384)
+@@ -1,8 +1,8 @@
+-package ru.geekbrains.homework.participant;
++package ru.geekbrains.geekbrains.homework.participant;
+ 
+-import ru.geekbrains.homework.barrier.Barrier;
+-import ru.geekbrains.homework.barrier.Track;
+-import ru.geekbrains.homework.barrier.Wall;
++import ru.geekbrains.geekbrains.homework.barrier.Barrier;
++import ru.geekbrains.geekbrains.homework.barrier.Track;
++import ru.geekbrains.geekbrains.homework.barrier.Wall;
+ 
+ public class Cat implements Movable {
+ 
+Index: lesson1/src/main/java/ru/geekbrains/homework/participant/Human.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/homework/participant/Human.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/homework/participant/Human.java	(date 1594584072381)
+@@ -1,8 +1,8 @@
+-package ru.geekbrains.homework.participant;
++package ru.geekbrains.geekbrains.homework.participant;
+ 
+-import ru.geekbrains.homework.barrier.Barrier;
+-import ru.geekbrains.homework.barrier.Track;
+-import ru.geekbrains.homework.barrier.Wall;
++import ru.geekbrains.geekbrains.homework.barrier.Barrier;
++import ru.geekbrains.geekbrains.homework.barrier.Track;
++import ru.geekbrains.geekbrains.homework.barrier.Wall;
+ 
+ public class Human implements Movable{
+ 
+Index: lesson1/src/main/java/ru/geekbrains/geekbrains/homework/participant/Movable.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/geekbrains/homework/participant/Movable.java	(date 1594584072269)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/homework/participant/Movable.java	(date 1594584072269)
+@@ -0,0 +1,18 @@
++package ru.geekbrains.geekbrains.homework.participant;
++
++import ru.geekbrains.geekbrains.homework.barrier.Barrier;
++import ru.geekbrains.geekbrains.homework.barrier.Track;
++import ru.geekbrains.geekbrains.homework.barrier.Wall;
++
++public interface Movable {
++
++    boolean walk(Track track);
++
++    boolean jump(Wall wall);
++
++    boolean overcome(Barrier barrier);
++
++    boolean isDroppedOut();
++
++    void setDroppedOut(boolean value);
++}
+Index: lesson1/src/main/java/ru/geekbrains/homework/Race.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/homework/Race.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/homework/Race.java	(date 1594584072395)
+@@ -1,12 +1,12 @@
+-package ru.geekbrains.homework;
++package ru.geekbrains.geekbrains.homework;
+ 
+-import ru.geekbrains.homework.barrier.Barrier;
+-import ru.geekbrains.homework.barrier.Track;
+-import ru.geekbrains.homework.barrier.Wall;
+-import ru.geekbrains.homework.participant.Cat;
+-import ru.geekbrains.homework.participant.Human;
+-import ru.geekbrains.homework.participant.Movable;
+-import ru.geekbrains.homework.participant.Robot;
++import ru.geekbrains.geekbrains.homework.participant.Robot;
++import ru.geekbrains.geekbrains.homework.barrier.Barrier;
++import ru.geekbrains.geekbrains.homework.barrier.Track;
++import ru.geekbrains.geekbrains.homework.barrier.Wall;
++import ru.geekbrains.geekbrains.homework.participant.Cat;
++import ru.geekbrains.geekbrains.homework.participant.Human;
++import ru.geekbrains.geekbrains.homework.participant.Movable;
+ 
+ public class Race {
+ 
+Index: lesson1/src/main/java/ru/geekbrains/homework/participant/Robot.java
+===================================================================
+--- lesson1/src/main/java/ru/geekbrains/homework/participant/Robot.java	(revision 54c61720eda1dbf6e358772bb8ce762ed6536b70)
++++ lesson1/src/main/java/ru/geekbrains/geekbrains/homework/participant/Robot.java	(date 1594584072376)
+@@ -1,8 +1,8 @@
+-package ru.geekbrains.homework.participant;
++package ru.geekbrains.geekbrains.homework.participant;
+ 
+-import ru.geekbrains.homework.barrier.Barrier;
+-import ru.geekbrains.homework.barrier.Track;
+-import ru.geekbrains.homework.barrier.Wall;
++import ru.geekbrains.geekbrains.homework.barrier.Barrier;
++import ru.geekbrains.geekbrains.homework.barrier.Track;
++import ru.geekbrains.geekbrains.homework.barrier.Wall;
+ 
+ public class Robot implements Movable{
+ 
+diff --git lesson1/target/classes/ru/geekbrains/Action.class lesson1/target/classes/ru/geekbrains/Action.class
+deleted file mode 100644
+index f3abf7ded632b04f178133644a3cbbc5fdbe9073..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/homework/barrier/Barrier.class lesson1/target/classes/ru/geekbrains/homework/barrier/Barrier.class
+deleted file mode 100644
+index fd0fa2fb3290aaf2744225d5ebc3a2a333fbf7ca..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/homework/participant/Cat.class lesson1/target/classes/ru/geekbrains/homework/participant/Cat.class
+deleted file mode 100644
+index 58639dd08be52d552d19cbd521ac65f0c5450296..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/Cat.class lesson1/target/classes/ru/geekbrains/Cat.class
+deleted file mode 100644
+index 7625a93355433333fad877e9c37456378c2cfc7a..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/homework/participant/Human.class lesson1/target/classes/ru/geekbrains/homework/participant/Human.class
+deleted file mode 100644
+index 27b724f2f484601fc1eab7c025f530639721bbd7..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/Human.class lesson1/target/classes/ru/geekbrains/Human.class
+deleted file mode 100644
+index f08073065a0aa2e1cf51297f6da6a5e39673c1ce..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/META-INF/lesson1.kotlin_module lesson1/target/classes/META-INF/lesson1.kotlin_module
+deleted file mode 100644
+index a49347afef10a9b5f95305e1058ba36adec7d6dd..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/homework/participant/Movable.class lesson1/target/classes/ru/geekbrains/homework/participant/Movable.class
+deleted file mode 100644
+index 5c127145ced99e7022dd02a53bc78989c588671b..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/homework/Race.class lesson1/target/classes/ru/geekbrains/homework/Race.class
+deleted file mode 100644
+index 1740d568846339cf4b4c4bf43de5f65112a781e6..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/homework/participant/Robot.class lesson1/target/classes/ru/geekbrains/homework/participant/Robot.class
+deleted file mode 100644
+index f9f60fd127a1f92e44f65fc011dd8e6b59db9c25..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/Robot.class lesson1/target/classes/ru/geekbrains/Robot.class
+deleted file mode 100644
+index 3b3ca564e86342724c28c1287f582ecf325488de..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/RunningTrack.class lesson1/target/classes/ru/geekbrains/RunningTrack.class
+deleted file mode 100644
+index 4f181e893324d03db9b25f5c00612aade507c220..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/Test.class lesson1/target/classes/ru/geekbrains/Test.class
+deleted file mode 100644
+index e7395e659c5d223bc116b6cd96202ee8e0cc43f4..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/homework/barrier/Track.class lesson1/target/classes/ru/geekbrains/homework/barrier/Track.class
+deleted file mode 100644
+index 78b339df7d7e1b8914492e9fe250b123780896c8..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/homework/barrier/Wall.class lesson1/target/classes/ru/geekbrains/homework/barrier/Wall.class
+deleted file mode 100644
+index 615a2bc4ec35e1292e96366253db8432deb8041b..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/Wall.class lesson1/target/classes/ru/geekbrains/Wall.class
+deleted file mode 100644
+index f185368500f11b898da3e438819554bb508ffa0b..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/Action.class lesson1/target/classes/ru/geekbrains/geekbrains/Action.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..34ab91cf3c2255d5ce68a1be9a8ac99521d18693
+GIT binary patch
+literal 153
+zc$_=+Z`VEs1_l!bE_MbEb_PyH2IivDJRqr|8OF%Kl2w{pz{tQAoL^d$oa&aDlgh}z
+z?U-DWnV+YZl~|U@$RJ--s-K>knw?aXn3-3M%!DXoWDo!;)Xz!GOV{^L%1TWxVPj-q
+cWME<d0VWopO$;my3_zL{L<42mK;jJS0OlSd0RR91
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/Cat.class lesson1/target/classes/ru/geekbrains/geekbrains/Cat.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..9ff123227b79a6910b07d4eb02f73642f8ecfcb2
+GIT binary patch
+literal 831
+zc$|Gv%Wl&^6g?9=v7NXN5<-E7HszV56mO7N6d|EXNRccaN|pU2wZeqht{fY|4t2{P
+z@D;R>B7qe4tR_E%xZ^}kkOG_gnsd)RbMLR;-^TzRVlNL1n-)w|l(}JH3)?2DdF<e(
+ziCYG48@OZOE<?`e@1i7NU`+;tl78YJQ~9w7MErz7tJT{K`ayW)F|4^F@SZ1r$BPbm
+zXF!#r8+Q4i%_E`mSy7K)iy_078zoN9^WJnKE`s4=c);U*;wHzCtu>o!hL+0Er}Oiz
+zFp0X}GokoQ!aeBox7@}m)@&4D+gO2Z;GT^d>I@t5lN?V@s`BULgB;6KIg;n{v;1M8
+zVPhBf7Z6|RolujH@{2++RQ{)uVO<S&20Z9FFFJj%OQr39c0BFIA`Jd&YP}!Eo=@Kk
+z6KXBH>5B-RmyrnKRvdZUr&W}el<6MFDjN`Cx#liV##HX@*V}YXlP*o`LWV5uh0f2^
+zYRKyp(Yna4Q|6Fo<g<-$V5byhaEWX#Eovx|wWk1-a5<$Z<I1f06`?iqg+^tBOk;Bd
+zZBDV8KAF^Lk&b*yRh`0TR4Q7T(HBycO6|slwnu3WSZC0S*>mLP<mzK;gh}AJM(aZ3
+U)#W6{5|R>;l$VlROOe<A0N9SDGXMYp
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/Human.class lesson1/target/classes/ru/geekbrains/geekbrains/Human.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..971d7fa13a43afe30292e57ce369f5ec14d1fad0
+GIT binary patch
+literal 626
+zc$|e$T}uK{5Iy6ruCD86WglAEn;GOwZ$%J6BuEj3?{~MwuDNThZuGZ$kf4WtKtC#)
+zdleJ<;=;_Cx#!Fr=KbUK4Zs05Z6vXpfr&L0)-7yUs9LBIQh|7i;*daXg2hEY4j#CD
+zBttnqCK!#~F2Ot<-ui?>M~41I9JqdTBisRZ%AKJn23-+JRnMB{_)d-p^-dJGdcJ?}
+zMnZ<8MR*<uB0MA{HQ?N6x78j)TQR2|?CW71dH$JHGi}Y>?~6y_z(&@Ag|veV(uA$Q
+z_YjIo)*6Vg*Sd83zBeXp|Ef9h#&Q^9hYytmUjhk^yo@hNY9D8l5qse1aMj{WoRiHL
+z&@+PsavW2-X&}$hnG#SyQI9F1JQH6r+u)pS)+R_as}mSsBl7wy!$O;1PLHZj>9bJ^
+jDNm%4a;e-d&AsjEb@=Y9wBU>8zLx(NR(=$&XjbJDK?h&^
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/Robot.class lesson1/target/classes/ru/geekbrains/geekbrains/Robot.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..f5f95926950d5629b1876714f3b0ace663230d1b
+GIT binary patch
+literal 847
+zc$|Gw%Wl&^6g?9=@gweow4p#s8{SEHc!R{E2nit}MY4FM%H9s6Fd?=p$40P2Z21X3
+zfdVNKNMX;)`60xeNz@b+*xbjNbC1v5@y}o1CID{ZrVR@<3nsQ@IB#JGyC&*3F5sex
+zO9n0*xMJWcLn-uMCt1Y6+6)FYgDgBC_^yaVdXGVCG`kG?gZMdTSo1{0A7x>{lYKuJ
+z5>oNvo<HpRiIDvq)YBJY#8CH=%<XgjGDv(8jZT)&;vi1<7>cT(+-SGucQj>1pLwu5
+zahCM>Lm@S7#k@7}U-=GJvF4x*$H5951J@ih&}69PAM#0lm`|qf>iLi9Th)y7qx@t3
+z-9XF1b=>%i^@U1ePT%LBC5vI_|DGAvr3H8BM}7BkFyK9ccK<nZzn6+Q`eUf`W|Z=f
+zt{P`FTJ_Y4h}|cNh|*4)a6hEQY%GE4eGX(dB*ALKJ0Y18+}~?<>3L0hdD<2V6lp{B
+zJ21H<$~slFIEw4kxs(~@V(Tl|Ar%FjqF7R(h6+VzM!*I(l}r_<=fh8ltx+zww#O*6
+zYGY^%iB)xE(x62?Y$a8n(dSaKTA9n2l}qV%>)6{J)dSWi=#}CTN(*s$G0?C{#Dz!e
+W*yEYyBE}MtO%mB!Dsoma&;15_7OyA(
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/RunningTrack.class lesson1/target/classes/ru/geekbrains/geekbrains/RunningTrack.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..812dde952872eba09ae2ad489ca8165c8b61b34f
+GIT binary patch
+literal 607
+zc$|$;%SyvQ6g|_VO%tQ`q4l*87h<hoHtv*y2tuJMXz6|uhjiL>B5C4(xe&pHAK*uc
+zchXV|D!Q0E_ue@#=KbUK4ZsPu9hg|RVW44Q!@{P8Ee1OhDoh8rnPOlahSHf-GHo*$
+z&BH!}c@f_WhSjcA;yN4qBI$8IqD`$E2R!QYMCy6AG}D2cFdTG~%nOAW`3aY5ve=T3
+zk}B*aJQ$raI9EbzPI7y*+0m9pk`Kdd{6K)aI7<R?DYblck$pVmkK9EWwu=%hhW&q;
+zGE_9ti?|BC8-FN*lwtQ*>UogLSYeNT%>+Y{4zwLrJ(D|ChbE71{Z?$ffIU%Dz)}v?
+zO9L)dcM8BVR_LZrMP){A6S|<$t(|8SzSvH_EfdGi6&h32OhI=#iZ-s!gB<1B_#R?q
+SAq1O;sQpc>|46LosI^b)nr2=A
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/Test.class lesson1/target/classes/ru/geekbrains/geekbrains/Test.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..2bd578dccc95a713b1c1e752d53cba81ac0f3d17
+GIT binary patch
+literal 991
+zc$|e(O-~b16g{u=@tC0%1d5_SDT+b`s)=DChQu@>niMongJ}qh*D|RC?TndD{RR9I
+zH?CQc*vQU}Kg6Hlf*A0;kp(dpr}OT)_rCM)JNIV#{rt-*fTwukVg!p41&Jkzk_%Hu
+zk6hRqmt72LTyf!QTy>GvSeAG!U_TGSAlVQw7MFGe%u2NH3yf5Q(BJNL8h%_;jW#o5
+z)u^f3J1P!ze3>+p_d!>nP>p-#mhT@nViknlt8UHjChH`27zs=+?p6=fM^$dCuvPYw
+zI0#$o`dV?o^@=MXSH&$B9sdVaKt_!NznO4<V)rWHb(+?Mj;~ddFuyxk){ABmL?P);
+z)aWLv+4gxL=g~XdQXkUpBxWRv0<IVJ;-<eD=!PBL&#JyQi&5NU>;JhzV0s{<q7s4G
+zf!i;89Ti?jcpEh$R+t$`c&FNJfrY^ZdSS@1)?&7OT^-%D!06x8MiDpo;pry>q31z6
+z#;8mbM5}ZHahz_C)7oj$zyxjf4*_{h5*^&a?aRaG%-Y0#+xmt~rfPqMQ8)T9>nE_h
+zy4i<KPkME$k0E-Fw`E;YT!zCbB}*^oZ5wN5-dsNYgehaq%3CY+oFhwozW8}$(*8J3
+z^=NIgkhGFN2POVbDj3EVRqhd+Y)ot3psqK_VG4JsaT7DROV89=G0jMy-(#f$J1OBA
+s<~X1XD-|)%W#Aqeb1*M>)RMR_k&#&7%Srr#BhHXLV_ks<>BJuX1~)tC^8f$<
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/Wall.class lesson1/target/classes/ru/geekbrains/geekbrains/Wall.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..850f2bf6b38937153263b0f851705c9745ae5235
+GIT binary patch
+literal 585
+zc$|e$OHaZ;5dM}H3Z)7n;w#2@Lrm<&n})=gm|##38a!|71{O+dO6&jfU`#yt1N>3O
+znL?1n*I{R8X1`bV{p0lwz!A1=m{=>pK*Peig$)av0`@@Z{vf%NK_DPH0)-PD>ZC1T
+zH1~S~=2>*F1S(w}s;hMDsrXiU0c~pC$d^G+#+v8Z(o6<=BCy+yQ@5|w$cv>8CyOl`
+z9Sf8%6>Ci{((wb)njQ8s;xwdTnC<MFD2;t}u35Llw8No%ln#n0IVivq*!j~%pvnX{
+zkYV4w_J+z&DA})+Q$NvBh&}or69RcUU>mADlPgu5CYNr0%eP)2o~X&8oI!bMz@h3)
+z0a(H^-Sm5?&d6;-=NR4Een#$#ZD-peaqLW?F-6T3xZ@~nyfP1RkZI$4h{{3;F%MDu
+MpIHBqxSFBrpB`0RG5`Po
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/homework/Race.class lesson1/target/classes/ru/geekbrains/geekbrains/homework/Race.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..eb3e4948f4bcc4efbd68163ac73b4a08890761e5
+GIT binary patch
+literal 2659
+zc$}S9-E&h#6#s3$_BKiFB~2(nK8h%&P>5}5`3RIs3sOk=XlgM<)SL8LZky!B+oXuT
+z05Up*zWCrnedNKu3P@|IE&AX%<Ba3Y=nTUXe})VydUjhN(hjEN<LvJ5obx+p&z`%<
+z&kt_S0oaZYz1V~fj#oMME9msXi7t)<3J!YVL6?Hp6dY2}t>7@n5e0ECss-G`ag^hj
+z7XcjSIN?PQ$9-_1SBOLv`tUkOzZYS22ys%u8)8ffG2q21yeSM%3-OkMx5fC50*xcZ
+zk!JAhF>*$soxvGt=x1<snu9t+P29-oM~m5%ZuM!Y3?YHInbtD>nq`Rf0_ZB7F-938
+zajO^|()E#)r5U-=^642ftDiNkk!Y`$)??(6C75Al<WziE8`Gj0EjJWR6f7e*6ch1%
+zdCe*qX(O-Y3Jg0cATD!=_LyTLF^a<s`gT)1%^IQ%YnKSe;D6*>$dS>`Q_mbuNokg4
+z=oYbTuY_g6Ji32=B!=olK}(PHXn9#$jvXAks96}i3A1RW^@D~ec$FyQHn9~yUPgqW
+z^_eneXj-0Mr$(p2?Jw=Q(#0kbdXS-Ic@&3=S&dG<#-6Zm*faK=eT~MOO^;}s7wMWG
+z=~@=)T9zHZ*G!qT36K3baa^T-C!nG_JaJYG+bZ`tsbw;vTvYLB<z9UjwSph-V#tp(
+zFgS+&7(s@i?#U+JUo<j<y5&a}RNLnI(nqCF?5|4~N*C=}`&;{FecJwxwtKzazGdGi
+zou|s(DxEKVYG1c!$@F6BGvR6ak;i)+L^FzlA4QD$aTf10G(L@x=%|oHIY|bR>Ks0x
+z>imz-4Vr#K-x*4XycjlBc6l(Uk9U78HLR!UH0vUZpX=^!d67lr;5SCQEHj_i2agpC
+z@{$`M-Ec9Rrv|Fz-YP%Im~bx3B5`iCpl6BI6x^ZtR17nEobo78HoBIjC)=Y@_#8bj
+zTg#K3-$ATlQT_`@8hgV2;T`!Dd!=B`Lkz*lVned1T_Qtz$ns*9p#};q6_Kh~J*pSV
+z%jk*>$Qqy3G9z^3EvJsMw`Cy}b4<6=q-SVb4#UGcvta-m@Dlx~ikAaST!<taXceWA
+z(dgbh1$I@cH<R>8(1$G~{qqKB#8w)suuVFVv*Rl$^alG~Rc7HxI%nWa23)FF4Nk$G
+zNV;a=Nd~xDqpq8Rl1RFxzDnh4oz#1z-mCi6^-|BJ-lwRmq*{?`zv@#rO0`P%)ycqf
+zEAX+}Hia5OxJ1+yEJ+^$#Z}KNR)|ajNo5MPGKpYP^-duq69~w8tqe|hP~u$TK8Y(5
+z-yrZFXZza5xhwc%%WhZLHP_~Lws}IHkoyYmhFu{~^KKsI(^$zc4$lOBY+T#?0|Mjd
+z4s)7*kH9qQ960%()i~;}Vbu)6l<n#;pTzTlHIrC7iFK1$KY<Hj?wUru0}~jNbir}N
+z76^jV*svtQ3uOcyj|p0(-!wKZ>GWcmlkcI^B@dhUr~Z<YWR>Uzr|gA(gh<xlGFIa@
+z_TnzuaS!{L10BqbPWBwS*cu#QjX21<aftQdFguMSEQ>h1jHB!eoM2bb%Wk2M{e*V*
+z3-+?#Fd%ztJN4B){EAo51dcnnk7l$`T<R&(wUWhUb{K8gK^=D+e`6<hQHSm(d^3Cx
+oaEBwtv4=f?N;Ag(!fKAaf6{-(R&T?7@OyCIrwEKP7M;ECUmb8A*#H0l
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/homework/barrier/Barrier.class lesson1/target/classes/ru/geekbrains/geekbrains/homework/barrier/Barrier.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..1bb801d5d5fc500c91065bae5502596418a3559b
+GIT binary patch
+literal 161
+zc$_=+Z`VEs1_l!bPId-%b_Nbc2KMySlHkm$R7M774NXr*2Cm@z(xT*4x6B-%5RX%0
+zQBh`UkzQ6}St28YVNt1mdTMHRQc+@NUNJH=BR@B_JijPgKMA5iAF7d&K>(yxKPNFS
+jUEe<`D>b=<jgf(ofr$YG7+HX}GO&PH46HzsiGd9Oe6uM(
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/homework/barrier/Track.class lesson1/target/classes/ru/geekbrains/geekbrains/homework/barrier/Track.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..0e042b76cefa0a0d0ff451e10eb8e8b1d871aaf1
+GIT binary patch
+literal 519
+zc$}4y!AiqG5QhIv)24~3tyQby$y?h)7r~q2L7`A6dT7ag6PI+`G=XiR;4^s<6v2ZJ
+z;6sU%Z4r-p*q!-j|M_;<{rr0W0C0vQ4>opPRIuk@-$BR00Yfd3X`Ig(*oef1N>zTz
+zV0TBofWmclCmEV!mCBo98A?4BVM3MmIEzFQ2(3!JDcbo=tr$+ny5O;ti%<)du70Pp
+zY$+cyz2KqHT1m~PT11O;1}B#JL_HFu((Tb8-Xtq@B!{Zxdd4-Fi+katjzb?cI1K!s
+z*D$n71W!a7^V@JPqnw8QJLGB|&4>X`=pAh^RB2h|K=j5I<#o8Ud!&Y>Es9?M4Xl6s
+z3hUW;wrJm`ZcvYH{4RV_owXYcI)%wfDt!!^Xl<C>XrS7Ef%Wu*tC?cMVEnaVgJIY)
+GuJ$*u7;DP_
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/homework/barrier/Wall.class lesson1/target/classes/ru/geekbrains/geekbrains/homework/barrier/Wall.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..ae46c96bf4043324768cd9299c4162efeaf53b07
+GIT binary patch
+literal 516
+zc$}4yK}*9h6vzMRx^}Idn^ULa$=lY$s^CrWpfDH=Jxt~~ouSRvwUBia{7ha1MeyJU
+z@I#5OSrLzVNZ$Lu{PW98^7-}t0pJt|E=+7Ys9?v&u8p>hJq9ZlGKzBsHXv~>Q<+~d
+zn4Lj)OyMfK7YvP|OvUwb9tw5K!-OiWVK(8(m@8T6vS{Y9TreCD)iQ{Ln1zbVbn!cl
+zv$=T4)GP?OQc|ekjwi_(gB^){Bp-=U>2#?Nca$yFMD%5WbqZ5&%2(V&4f`G}*bKe@
+z9m3Eo2tmTrD7XoyVnSCw`8(rs9d(0a9ML11V5rhCihk&U4a#e9Xm&~UNgEVh{|(GP
+ze1-9>JsUJ{(r(ZmQ~Mowq}ppY>a+@-6;%2aG|()Wf!09Pe}VDzgR^w8t})))P+}Oi
+Hw5#<EeXVMc
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/homework/participant/Cat.class lesson1/target/classes/ru/geekbrains/geekbrains/homework/participant/Cat.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..b2c8ea3f18aa3af56dd90c467f3b84ef947a0f0b
+GIT binary patch
+literal 1785
+zc$}3~+fEZv6kVsCc1juO1uRuSK}CDf4#>p|hzQ1rDPmFr2~VDuNf~H6&2(Cf-(%tn
+z51NQZAN&A6%DB&&u{5<L^yQr0efC~!?MvtPpP#<~EMPs1FlGlZfH`qI5XXF&9u~t`
+z!r~wvVo~@Wsd%j7iHc<grN*lULp*=PTU@X3T3IhRwplCF+fbFif8DIsUm0fk&|zSk
+zu5XW5j`K#X>>M(L4{WPmHx9O&B4D2(xMJ2!XO&?r^*`q3W_p)6H>?BVjO5Ll@upcV
+z8ukt^R-_86#4EepHpOqxsW^vbgJC{zH}$e%92aeF)*7AWp;a|bEc;lmbK5aXW}Vj@
+zeS<rqyc5#Ou#mb$c9Gk*Y1sOX%}dA2X{sgQ2$Ny1?`&#R!69Rd*Z-AqM4hBE`cXoS
+zu1F!Gj0(eSzqt${t7X_FOU!twAL@1Ymh7tMyxb7F5g0VH@uFi({3!uC)G(Y*uaepq
+zyAf#dN|VHf9LwDqhS5~I*LH>rR?{vSFHO<i5RE%0f;5a^MT3SR4a10Nh$5omsfJZN
+zQ?aJvxrP|xG}FG<i6MF}W4m}{l*qN%AIz53a@T>HK-KDf?iJ0VY&Zq;gNs1_$6S9K
+zajCkyCWvYJW`w~o2n9aTTKd}fM0e#K^=|4a-73Y6V3f`)^s7RCh3?VJcd$(M48F|7
+z8T^^aGbmqVR)Wq10(1^jWQ3TaWW@+0jxq9P+<YW)6_A$TXVMZ1e9{sc{N%lcagX^e
+zy@<D1<|~x!Hv~RHRX#!SpOVurX@e3bA!!nBaGNHE2~5)ab+QBSMb_x!h8vjbf$k^t
+z;6>=;7obn$W;gmR-1gA-JoKbM7y932e?Voph-9jRB-tiOVg`54NfMIeE>a$e4knWW
+zL=ZY{&%#BVk%*cb;2|=kX&P?ws;4lR89zhle3D`5%}`FZLsPJ=DM<dfB)*6HJ%so^
+NcL~Y$6q1us`d`n}hHd}=
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/homework/participant/Human.class lesson1/target/classes/ru/geekbrains/geekbrains/homework/participant/Human.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..581baf4e6faee78b4d3cf76a5f5930d64ec976e1
+GIT binary patch
+literal 1791
+zc$}S7T~8B16g|^!yJcDI2Ut)*K}AbZ7KGvlh=|63DPmFr2~SSTrYy9(&9W`V-(%tn
+z51LqwKKKLtQN}y7D>Mj+%gfB&JNKS*=H9#W>-UeJ0A{hQLBmuRx-c!4`(l~V=%Aos
+z4ux(!KtcE(s(7U0v5I*H#pZRBAyeGrEpF7fT{TLcYuQyg>#6g1ubTD7ifL7MJqEVw
+z`?h#(zi8T3Z<j&aah*oP+*xmmfNh5Of@NFYB13=fU(D6j@lE1<?(7g}vS``n>t?-d
+zx*NP)lPa7FuWfSI65oMS@pi2PhC<P88dcNWFT32b4?4|Vr*0lP?!M9Bu4h%O2Dd$9
+zrCH~;xZokFWth$VM}C>Ru4TH$hRZAa^W$`zm?unz>Co9!s**>>8gKl)$R5>_VJ3_c
+zDs@c?5!a|OOoh#5NH{IitvI5~b782L{av!Ffs@o<0D(cb4qkN3Ni-)wdk##m)2rmR
+z#dO44yw)VK3D5DThM_Mve%5?yC8z0D%$Js^t|l8kDZ+I0VnK(F9vzpE)R96`#S<Ni
+zc&cJa#WNjgWau&%7%7I-iIny7o>?L3g>XP?PRkz&Dg@ow2svBSkE-dFtoJ?w{gsp9
+zrh?`<bQdv7FNX$(ZYYR|;?kQF5%raOD%h#6w5t@?i#}Q}(^rlB3hjOQZ(#X}HX`|<
+zHlq3AHk8jYD@$t@F<LKCWRjRtWTgosgMRYn{d^4I3Lq`P&!i<3M5HA&M9F&<g8}m!
+zIuU2-{1+$_UlIENRrv@ddPL5sq>W3Mtfa~M!N)Xd3}KkguaO-?B)LRS9Ij*J4D=|W
+z$In9_JO_OgH%_D9#H|2*D?lF*=tBS7iSJMu&LbJ=AQ?C&8Ne8BpO9oF$sObZ5(7*o
+z$A}<tbleLcaZDoWen5c8Fizd@lNSSp@%&&LiIYxh(wnE8i4INiV@+}LXC(1m+&e=^
+P<kKl3lV=K<lu^bXO!kQv
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/homework/participant/Movable.class lesson1/target/classes/ru/geekbrains/geekbrains/homework/participant/Movable.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..aece75f972bd20d56fbd677396a6ba0ba5053c35
+GIT binary patch
+literal 416
+zc$}4vzfQw25Ql#*X;Vso@)qfW2MP-tLQGU0K&{m660G9HjjhX{z8eD%z(XM%!_W=Y
+z!+obae|Puw{qYH4j;k1#F{T31o=hn)PoKG!Tcyg3Nmun@`fhh>Z@H8iF>A&0l_@Xp
+zXB%%9?am3@9AmG^m>`dBr#Sa*fxBY{Jp3}uNOb+k);aaIY#V`-v@f35syVDi>1MVP
+zn7r7QbM>T+-<T|HN10LA1$88F`~P}J+~{08sv7wx3ru@m8mhK(nH4H;Mgjr@^lupX
+bgAf6pLyQ7ri~~<G2|PpMfBKVs9N^*y0v&d7
+
+diff --git lesson1/target/classes/ru/geekbrains/geekbrains/homework/participant/Robot.class lesson1/target/classes/ru/geekbrains/geekbrains/homework/participant/Robot.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..33b776ad4f7173bc3aa78708612ec7408311d69d
+GIT binary patch
+literal 1791
+zc$}S7TTc@~6#k~&cFVHZ3s|avf{ON{T@Z>F5D|?LQ^Z&T2~Tdzrd@j3X1guM-(%tn
+z51NQZAN&FSDC3#gwKP}~%gfB!Gv|EYH|Lz4U%!9+1h9y81q$YdFob!&+~v!HLI*ho
+zOUMo59&+4wU&aF&4`nPfNDaMiFvRi)dPmo4dZVlr9NTP^>1?E~zkAuPH(wZLx#BRe
+z4cE7;*Q$A=QFbZ}%D!zio5ucDn+NPM1Xs+4>8vu0C;!FV*huXV=TmE+IKz3fVZ3VB
+zi-x_e7i&U=Rnluax^41r&nY<-v&E3h+ik6E7}cV!n~helS+VNIp=DRKrfxfC$!zKk
+zM|)!xEr(z5kkm3PCjTS9sN1$_*xI(Om#WJtx=q00Cd2%|*;J~6L&m1w{CklDswKn1
+zAWEpzH6eswqsA~dXf8v@>KJy(;$2=EgnHfG1-tAyN&Ptx7*w<MtY=RANe(*FGMrwo
+zl-%Rf5$Nc(Hi->6mOC{JW64y%`BVy4+b$W;O<r9^G(5}0RE%Opg^Cds7Z6qvL0HBk
+z6{~nGV@<{r6;Z_KGUpg6hRBJOt>S@EB3EuOpiQgejsz8gZmbPBThx!T;S|jGE&~0P
+z*}<lQ=6T>QVuoH01q{QG;N!)mH^;~8EB1)DQ(bA7DQ*;Fv|gmI8u=yK$I{=x(wSrU
+z(v!#Vr>Bk~eHK}9TH^@NdVwOt#1tVbN*FPWlQ-?=BY{hRusA;x7FXaC7T4e>?`2GQ
+z%&+N$pGDJOAZ5NH@By;)5t9FioPI$Y6fki?6L*8VG*L`qiq5Z)9e^*qMo%2BV!98y
+zpU{J6p--HFK7(tg(XZo%hra8fCpbFS|2Fd-GQ(LU(>)}KE=dBjxOqYn7bLfk^hh)?
+zksKg`&{4M+F5;{}RNVj%ks(FhaFbU(g~9a1F+wMuRD?H8Ihh_!!LFtt`D23kHtzHh
+Q;`?+;NVcz#tccS70Q--LJ^%m!
+
